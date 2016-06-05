@@ -15,7 +15,7 @@ public class SimpleDotCom {
         for(int cell : locationCells) {
             if (cell == target) {
                 hitCount++;
-                return hitCount == locationCells.length ? "Done" : "Hit";
+                return hitCount == locationCells.length ? "Busted" : "Hit";
             }
         }
 

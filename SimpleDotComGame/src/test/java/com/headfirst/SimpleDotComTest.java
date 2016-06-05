@@ -30,11 +30,11 @@ public class SimpleDotComTest {
     }
 
     @Test
-    public void shouldBeoneAfterThreeCorrectGuesses() throws Exception {
+    public void shouldBeBustedAfterThreeCorrectGuesses() throws Exception {
         dotCom.checkYourself("2");
         dotCom.checkYourself("3");
         String result = dotCom.checkYourself("4");
 
-        assertEquals("Done", result);
+        assertEquals("Busted", result);
     }
 }
