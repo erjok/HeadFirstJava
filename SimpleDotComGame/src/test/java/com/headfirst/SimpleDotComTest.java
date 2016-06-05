@@ -37,4 +37,13 @@ public class SimpleDotComTest {
 
         assertEquals(ShotResult.BUSTED, result);
     }
+
+    @Test
+    public void shouldNotBeBustedWhenHittingSameCells() throws Exception {
+        dotCom.checkYourself("2");
+        dotCom.checkYourself("2");
+        ShotResult result = dotCom.checkYourself("2");
+
+        assertEquals(ShotResult.HIT, result);
+    }
 }
