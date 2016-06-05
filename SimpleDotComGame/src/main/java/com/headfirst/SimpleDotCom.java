@@ -1,4 +1,4 @@
-package main.java.com.headfirst;
+package com.headfirst;
 
 public class SimpleDotCom {
 

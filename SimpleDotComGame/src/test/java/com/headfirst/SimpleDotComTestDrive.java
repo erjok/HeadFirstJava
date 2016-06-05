@@ -1,6 +1,4 @@
-package tests.java.com.headfirst;
-
-import main.java.com.headfirst.SimpleDotCom;
+package com.headfirst;
 
 public class SimpleDotComTestDrive {
     public static void main(String[] args) {
