@@ -9,16 +9,16 @@ public class SimpleDotCom {
         this.locationCells = locationCells;
     }
 
-    public String checkYourself(String userGuess) {
+    public ShotResult checkYourself(String userGuess) {
         int target = Integer.parseInt(userGuess);
 
         for(int cell : locationCells) {
             if (cell == target) {
                 hitCount++;
-                return hitCount == locationCells.length ? "Busted" : "Hit";
+                return hitCount == locationCells.length ? ShotResult.BUSTED : ShotResult.HIT;
             }
         }
 
-        return "Miss";
+        return ShotResult.MISS;
     }
 }
