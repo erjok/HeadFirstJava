@@ -23,4 +23,8 @@ public class Console {
             return null;
         }
     }
+
+    public void writeLine(String text) {
+        System.out.println(text);
+    }
 }

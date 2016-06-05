@@ -19,14 +19,15 @@ public class SimpleDotComGame {
 
         while (isAlive) {
             String guess = console.getUserInput("Input number");
-            ShotResult result = dotCom.checkYourself(guess);
-            System.out.println(result);
+            int target = Integer.parseInt(guess);
+            ShotResult result = dotCom.shot(target);
+            console.writeLine(result.toString());
             turn++;
 
             if (result == ShotResult.BUSTED)
                 isAlive = false;
         }
 
-        System.out.printf("You have used %d turns", turn);
+        console.writeLine(String.format("You have used %d turns", turn));
     }
 }

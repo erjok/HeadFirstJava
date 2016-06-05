@@ -17,32 +17,32 @@ public class SimpleDotComTest {
 
     @Test
     public void shouldHitWhenGuessIsCorrect() throws Exception {
-        ShotResult result = dotCom.checkYourself("2");
+        ShotResult result = dotCom.shot(2);
 
         assertEquals(ShotResult.HIT, result);
     }
 
     @Test
     public void shouldMissWhenGuessIsNotCorrect() throws Exception {
-        ShotResult result = dotCom.checkYourself("1");
+        ShotResult result = dotCom.shot(1);
 
         assertEquals(ShotResult.MISS, result);
     }
 
     @Test
     public void shouldBeBustedAfterThreeCorrectGuesses() throws Exception {
-        dotCom.checkYourself("2");
-        dotCom.checkYourself("3");
-        ShotResult result = dotCom.checkYourself("4");
+        dotCom.shot(2);
+        dotCom.shot(3);
+        ShotResult result = dotCom.shot(4);
 
         assertEquals(ShotResult.BUSTED, result);
     }
 
     @Test
     public void shouldNotBeBustedWhenHittingSameCells() throws Exception {
-        dotCom.checkYourself("2");
-        dotCom.checkYourself("2");
-        ShotResult result = dotCom.checkYourself("2");
+        dotCom.shot(2);
+        dotCom.shot(2);
+        ShotResult result = dotCom.shot(2);
 
         assertEquals(ShotResult.HIT, result);
     }

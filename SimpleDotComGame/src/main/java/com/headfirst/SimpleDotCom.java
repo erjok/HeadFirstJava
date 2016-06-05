@@ -9,8 +9,7 @@ public class SimpleDotCom {
         this.locationCells = locationCells;
     }
 
-    public ShotResult checkYourself(String userGuess) {
-        int target = Integer.parseInt(userGuess);
+    public ShotResult shot(int target) {
 
         for(int cell : locationCells) {
             if (cell == target) {
